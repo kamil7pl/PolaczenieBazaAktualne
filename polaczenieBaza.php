@@ -17,7 +17,7 @@ class polaczenieBaza
     } 
   
   
-    echo "Połączono z bazą. Użyto konstruktora. <br />" . //$this->con->host_info; 
+    echo "Połączono z bazą. Użyto konstruktora. <br />"; 
     
     $this->con->close(); 
   }
