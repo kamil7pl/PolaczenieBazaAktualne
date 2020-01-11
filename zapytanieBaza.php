@@ -1,5 +1,5 @@
 <?php
-class polaczenieBaza
+class zapytanieBaza
 {
   private $host="localhost";
   private $dbName= "testowa";
@@ -22,5 +22,5 @@ class polaczenieBaza
     $this->con->close(); 
   }
 }
-$spr = new polaczenieBaza();
+$spr = new zapytanieBaza();
 ?>
