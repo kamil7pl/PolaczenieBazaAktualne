@@ -19,8 +19,8 @@ class polaczenieBaza
   
     echo "Połączono z bazą. Użyto konstruktora. <br />"; 
     
-    $this->con->close(); 
+    //$this->con->close(); 
   }
 }
-$spr = new polaczenieBaza();
+//$spr = new polaczenieBaza();
 ?>
