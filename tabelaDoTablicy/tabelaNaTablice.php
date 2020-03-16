@@ -1,5 +1,5 @@
 <?php
-require_once("polaczenieBaza.php");
+require_once("polaczenieBaza.php");//Uwaga na to.
 class tabelaNaTablice extends polaczenieBaza{
 	public $tabelaDoTablicy=array();
 	public function zTabeliDoTablicy($sql){
