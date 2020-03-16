@@ -7,9 +7,10 @@ class tabelaNaTablice extends polaczenieBaza{
 			while($row=$wynik->fetch_assoc()){
 				array_push($this->tabelaDoTablicy, $row);
 			}
+			return $this->tabelaDoTablicy;
 	}
 }
 $tabelaTablica=new tabelaNaTablice();
-$tabelaTablica->zTabeliDoTablicy("select*from daty");
-print_r($tabelaTablica->tabelaDoTablicy);
+print_r($tabelaTablica->zTabeliDoTablicy("select angielski, polski from angielski_polski"));
+
 ?>
