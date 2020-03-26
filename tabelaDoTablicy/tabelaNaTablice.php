@@ -1,16 +1,16 @@
 <?php
 require_once("polaczenieBaza.php");//Uwaga na to.
 class tabelaNaTablice extends polaczenieBaza{
-	public $tabelaDoTablicy=array();
 	public function zTabeliDoTablicy($sql){
+		$tablica=array();
 	$wynik=$this->con->query($sql);//select
 			while($row=$wynik->fetch_assoc()){
-				array_push($this->tabelaDoTablicy, $row);
+				array_push($tablica, $row);
 			}
-			return $this->tabelaDoTablicy;
+			return $tablica;
 	}
 }
-$tabelaTablica=new tabelaNaTablice();
-print_r($tabelaTablica->zTabeliDoTablicy("select angielski, polski from angielski_polski"));
+//$tabelaTablica=new tabelaNaTablice();
+//print_r($tabelaTablica->zTabeliDoTablicy("select*from angielski_polski"));
 
 ?>
