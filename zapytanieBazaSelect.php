@@ -1,14 +1,17 @@
 <?php
 require_once("polaczenieBaza.php");
 class zapytanieBazaSelect extends polaczenieBaza{
-		public function zapytanie(){
-			$wynik=$this->con->query("select*from podzielnaprzez where podzielnaprzez2=74;");
+		public function select($sql){//Zwraca wynik zapytania jako tablica asocjacyjna, gdy istnieje rekord. W przeciwnym przypadku zwraca NULL.
+			$wynik=$this->con->query($sql);
 			$row=$wynik->fetch_assoc();
-			echo $row["podzielnaprzez2"];
-			$this->con->close();
+			return $row;
+			//$this->con->close(); w destruktorze
 			
 		}
 }
-$sprawdzenie=new zapytanieBazaSelect();
-$sprawdzenie->zapytanie();
+
+//$zapytanieBazaSelect=new zapytanieBazaSelect();
+//$tabAsocjacyjna=$zapytanieBazaSelect->select("select*from podzielnaprzez where podzielnaprzez2=75");//74
+//VAR_DUMP($tabAsocjacyjna);
+
 ?>
