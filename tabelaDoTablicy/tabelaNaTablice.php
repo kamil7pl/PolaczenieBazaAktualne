@@ -12,5 +12,6 @@ class tabelaNaTablice extends polaczenieBaza{
 }
 //$tabelaTablica=new tabelaNaTablice();
 //print_r($tabelaTablica->zTabeliDoTablicy("select*from angielski_polski"));
+//$this->con->close(); w destruktorze
 
 ?>
